@@ -38,7 +38,7 @@
 //        }
 //};
 
-#include <iostream>
+/*#include <iostream>
 #include <string>
 class Person{
 
@@ -70,8 +70,70 @@ std::ostream &print(std::ostream &os, const Person &per)
 {
     os << per.getName() << per.getAddress();
     return os;
-}
+}*/
 
 //read 和 print不是成员函数，只是跟这个类相关的函数，所以别放class里面，放外面行了
 //实际你用起来肯定是把这个类放到一个头文件里，别在头
 
+// 8章
+
+//#include <iostream>
+//#include <fstream>
+//#include <string>
+//#include <vector>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    ifstream in("data");
+//    if(!in)
+//    {
+//        cerr << " error " << endl;
+//        return -1;
+//    }
+//
+//    string line;
+//    vector<string> words;
+//    while (getline(in, line)) { // one by one -> in >> line
+//        words.push_back(line);
+//    }
+//
+//    in.close();
+//
+//    vector<string>::const_iterator it = words.begin();
+//    while (it != words.end()) {
+//        cout << *it << endl;
+//    }
+//
+//    return 0;
+//}
+
+
+/*#include <iostream>
+using namespace std;
+
+int main(int argc, char **argv)
+{
+    string str;
+    for(int i = 0; i != argc; ++i)
+    {
+        cout << "argc[" << i << "]: " << argv[i] << endl;  // 0是文件名
+    }
+    return 0;
+}*/
+
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    const char *cp = "Hello World!!!";
+    string s1(cp);
+    cout << s1 << endl;
+    return 0;
+}
