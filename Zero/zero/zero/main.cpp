@@ -124,16 +124,52 @@ int main(int argc, char **argv)
 }*/
 
 
+//#include <iostream>
+//#include <fstream>
+//#include <map>
+//#include <string>
+//#include <algorithm>
+//using namespace std;
+//
+//int main(int argc, char *argv[])
+//{
+//    ifstream in(argv[1]);
+//    if (!in)
+//    {
+//        cout << " error" << endl;
+//        exit(1);
+//    }
+//    map<string, size_t> word_count;
+//    string word;
+//    while (in >> word) {
+//        ++word_count[word];
+//
+//    }
+//    for (const auto &w : word_count)
+//        cout << w.first << "occur" << w.second << " ";
+//    return 0;
+//}
+
+
+//#include <iostream>
+//using namespace std;
+//int   main(int   argc,   char*   argv[])
+//  {
+//  int   i;
+//  for   (i   =   0;   i<argc;   i++)
+//  cout<<argv[i]<<endl;
+//  cin>>i;
+//  return   0;
+//  }
 
 #include <iostream>
-#include <string>
-
+#include <ctime>
+#include <cstdlib>
 using namespace std;
-
 int main()
 {
-    const char *cp = "Hello World!!!";
-    string s1(cp);
-    cout << s1 << endl;
+    srand( (unsigned)time( NULL ) );
+    for (int i = 0; i <100;++i)
+        cout << (rand() % 10) * 0.1 << endl;
     return 0;
 }
